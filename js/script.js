@@ -6,6 +6,7 @@ const todoResultValue = document.getElementById('todoResultValue')
 
 
 const base = {
+    counter: getCounter(),
     todo: getTodoLS(),
     check(id) {
         for (let i = 0; i < base.todo.length; i++) {
@@ -27,12 +28,14 @@ const base = {
     },
     addTodoArray(author, post) {
         const todoItem = {
-            id: 'td' + (base.todo.length + 1),
+            id: 'td' + (base.counter + 1),
             author: author,
             post,
             ready: false
         }
         base.todo.push(todoItem)
+        base.counter++
+        console.log(base.counter)
         return todoItem
     }
 }
@@ -119,14 +122,27 @@ function checkTodo(event) {
 }
 
 function getTodoLS() {
+
     if (localStorage.getItem('todo')) {
         return JSON.parse(localStorage.getItem('todo'))
     }
+
     return []
 }
 
+function getCounter() {
+    if (localStorage.getItem('todoCounter')) {
+        return  JSON.parse(localStorage.getItem('todoCounter'))
+    }
+
+    return 0
+}
+
 function setTodoLS() {
+
     localStorage.setItem('todo', JSON.stringify(base.todo))
+    localStorage.setItem('todoCounter', JSON.stringify(base.counter))
+
 }
 
 renderTodo()
