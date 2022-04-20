@@ -39,7 +39,30 @@
             </div>
         </div>
     </section>
+
+    <section class="calc">
+        <div class="container">
+            <h2 class="calc__title">Калькулятор</h2>
+            <form class="calc__form" id="form-calc">
+
+                <label class="calc__label" for="x">Введите первое число</label>
+                <input class="calc__input" id="x" name="x" type="number">
+                <label class="calc__label" for="y">Введите первое число</label>
+                <input class="calc__input" id="y" name="y" type="number">
+
+                <div class="calc__btn-wrapper">
+                    <button class="calc__btn" type="button">+</button>
+                    <button class="calc__btn" type="button">-</button>
+                    <button class="calc__btn" type="button">x</button>
+                    <button class="calc__btn" type="button">÷</button>
+                </div>
+                <span class="calc__label">Результат</span>
+                <output class="calc__result" id="result" name="result">0</output>
+            </form>
+        </div>
+    </section>
 </main>
 <script src="js/script.js"></script>
+<script src="js/calc.js"></script>
 </body>
 </html>
