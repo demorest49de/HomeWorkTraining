@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.png">
+    <title>HomeTraining</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main>
+    <section class="present">
+        <div class="container qs">
+            <h1 class="present__title">JavaScript</h1>
+            <p class="present__subtitle">Основы для верстальщика</p>
+        </div>
+    </section>
+    <section class="todo">
+        <div class="container">
+            <h2 class="todo__title todo__title_js">Список дел сотрудников</h2>
+            <!--                    1 див - для блока -->
+            <div class="todo__wrapper">
+                <!--                    2 див - для блока -->
+                <div class="todo__form-wrapper">
+                    <form class="todo__form" id="form-todo">
+                        <label class="todo__label" for="author">Автор</label>
+                        <input class="todo__input" id="author" name="author" type="text" required>
+                        <label class="todo__label" for="post">Задача</label>
+                        <input class="todo__input" id="post" name="post" type="text" required>
+
+                        <button class="todo__btn" TYPE="submit">Отправить</button>
+                    </form>
+                    <p class="todo__result">Всего дел: <span id="todoResultValue">0</span></p>
+                </div>
+                <div class="todo__list-wrapper">
+                    <ol class="todo__list">
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="js/script.js"></script>
+</body>
+</html>
