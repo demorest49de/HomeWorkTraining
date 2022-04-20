@@ -92,6 +92,7 @@ function addRemoveCallback(e) {
     post.remove()
     const id = e.target.getAttribute('data-id')
     const result = base.removeItem(id)
+    todoResultValue.textContent = base.todo.length
     setTodoLS()
     console.log(result)
 }
